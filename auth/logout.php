@@ -1,0 +1,8 @@
+<?php
+// auth/logout.php
+if (session_status() === PHP_SESSION_NONE) if (session_status() == PHP_SESSION_NONE) { session_start(); }
+$_SESSION = [];
+session_destroy();
+header("Location: ../auth/login.php");
+exit;
+?>
